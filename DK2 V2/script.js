@@ -677,7 +677,7 @@ function addGround()
 	woodMap.repeat.set( 5, 5 );
 	woodMap.anisotropy = 16;
 		
-	var woodBumpMap = THREE.ImageUtils.loadTexture( "/resources/Texture parquet rovere seamless bump simo-3d.jpg",THREE.UVMapping );
+	var woodBumpMap = THREE.ImageUtils.loadTexture( "/Tesi/DK2 V2/resources/Texture parquet rovere seamless bump simo-3d.jpg",THREE.UVMapping );
 	woodBumpMap.wrapS = woodBumpMap.wrapT = THREE.RepeatWrapping;
 	woodBumpMap.repeat.set( 5, 5 );
 	woodBumpMap.anisotropy = 16;
