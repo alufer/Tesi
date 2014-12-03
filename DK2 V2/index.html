@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		
+		<title>Prova tesi DK2</title>
+		<!-- poche istruizioni per lo stile del canvas -->
+		<style>
+		html, body {
+        margin: 0;
+        padding: 0;
+        font: 0.9em Verdana, sans-serif;
+        background-color: #000000;
+      }
+      canvas {
+        width: 100% !important;
+        height: 100% !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      section {
+        position: relative;
+        z-index: 2;
+      }
+      #stats {
+        margin: 0.5em;
+        color: white;
+      }
+      #stats.hidden {
+        display: none;
+      }
+      #stats.error {
+        color: #FF5555;
+      }
+      #stats ul{
+        list-style: none;
+        padding: 0.5em;
+      }
+      #stats li{
+        font-weight: bold;
+      }
+      #stats li span{
+        font-weight: normal;
+        font-family: Fixed, monospace;
+      }
+      #footer {
+        position: absolute;
+        bottom: 0.5em;
+        left: 0;
+        right: 0;
+        text-align: center;
+        color: white;
+      }
+      #vrBtn {
+        cursor: pointer;
+      }
+	</style>
+	</head>
+	<body>
+	<!-- Informazioni stato oculus -->
+		<section id="stats">
+      <ul>
+        <li>View in VR: <img src="/DK2/media/vr_goggles_sm.png" id="vrBtn"></li>
+        <li style="display:none;">Hardware Unit ID: <span id="hardwareUnitId">Oculus Rift DK2, Oculus VR 0</span></li>
+        <li style="display:none;">Device ID: <span id="deviceId">Oculus Rift DK2, Oculus VR 0</span></li>
+        <li style="display:none;">Device Name: <span id="deviceName">Oculus Rift DK2</span></li>
+        <li style="display:none;">&nbsp;</li>
+        <li style="display:none;">Render Target Resolution: <span id="renderTarget">1920x1080</span></li>
+        <li style="display:none;">Left Eye Offset: <span id="leftTranslation">[-0.03, 0.00, 0.00]</span></li>
+        <li style="display:none;">Right Eye Offset: <span id="rightTranslation">[0.03, 0.00, 0.00]</span></li>
+        <li style="display:none;">&nbsp;</li>
+        <li style="display:none;">Timestamp: <span id="timestamp">22309.68</span></li>
+        <li style="display:none;">Orientation: <span id="orientation">[0.02, 0.03, 0.00, 1.00]</span></li>
+        <li style="display:none;">Position: <span id="position">[-0.25, -0.18, -0.58]</span></li>
+        <li style="display:none;">AngularVelocity: <span id="angularVelocity">[0.00, 0.00, -0.01]</span></li>
+        <li style="display:none;">LinearVelocity: <span id="linearVelocity">[0.00, 0.00, 0.00]</span></li>
+        <li style="display:none;">AngularAcceleration: <span id="angularAcceleration">[-0.19, 1.57, -1.07]</span></li>
+        <li style="display:none;">LinearAcceleration: <span id="linearAcceleration">[0.02, 0.04, -0.10]</span></li>
+      </ul>
+    </section>
+		
+		<!-- inclusione delle librerie -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/three.js/r69/three.js"></script>
+		
+		<script src="/DK2 V2/Lib/WebGLDeferredRenderer.js"></script>
+		<script src="/DK2 V2/Lib/ShaderDeferred.js"></script>
+		<script src="/DK2 V2/Lib/CopyShader.js"></script>
+		<script src="/DK2 V2/Lib/FXAAShader.js"></script>
+		<script src="/DK2 V2/Lib/ConvolutionShader.js"></script>
+		<script src="/DK2 V2/Lib/EffectComposer.js"></script>
+		<script src="/DK2 V2/Lib/RenderPass.js"></script>
+		<script src="/DK2 V2/Lib/ShaderPass.js"></script>
+		<script src="/DK2 V2/Lib/MaskPass.js"></script>
+		<script src="/DK2 V2/Lib/BloomPass.js"></script>
+		
+		<script src="/DK2 V2/Lib/OculusRiftEffect.js"></script>
+		<script src="/DK2 V2/Lib/FirstPersonControls.js"></script>
+		
+		<script src="/DK2 V2/Lib/stats.min.js"></script>
+		<script src="/DK2 V2/Lib/THREEx.KeyboardState.js"></script>
+		<script src="//js.leapmotion.com/leap-0.6.3.min.js"></script>
+		
+		<script src="http://threejs.org/examples/js/loaders/OBJLoader.js"></script>
+		<script src="http://threejs.org/examples/js/loaders/MTLLoader.js"></script>
+		<script src="http://threejs.org/examples/js/loaders/OBJMTLLoader.js"></script>
+		<script src="/DK2 V2/Lib/threex.dynamictexture.js"></script>
+		<script src="/DK2 V2/Lib/ColladaLoader.js"></script>
+		<script src="/DK2 V2/Lib/THREEx.WindowResize.js"></script>
+		<script src="https://dl.dropboxusercontent.com/u/3587259/Code/Threejs/OrbitControls.js"></script>
+		<script src="script.js"></script>
+		
+		<!--<canvas id="your_canvas" style="z-index:-1;">-->
+	</body>
+</html>

@@ -1,0 +1,25 @@
+# Blender MTL File: 'None'
+# Material Count: 2
+
+newmtl plane
+Ns 654.411785
+Ka 0.000000 0.000000 0.000000
+Kd 0.512000 0.512000 0.512000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Bump Texture parquet rovere seamless bump simo-3d.jpg
+map_Kd Texture parquet rovere seamless simo-3d.jpg
+
+newmtl plane.001
+Ns 194.117647
+Ka 0.000000 0.000000 0.000000
+Kd 0.512000 0.512000 0.512000
+Ks 0.984887 0.984887 0.984887
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Texture parquet rovere seamless simo-3d.jpg
+map_Bump Texture parquet rovere seamless bump simo-3d.jpg
+map_Ks Texture parquet rovere seamless bump simo-3d.jpg
