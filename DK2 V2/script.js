@@ -604,7 +604,7 @@ function addObjMtl(obj_name,mtl_name,scale,position,rotation,obj)
 function addJSON(obj_name,obj,pos,rot,scale)
 {
 	var loader = new THREE.JSONLoader();
-  loader.load("/resources/" + obj_name, function(geometry,materials)
+  loader.load("/Tesi/DK2 V2/resources/" + obj_name, function(geometry,materials)
 	{
 		var object = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
 
@@ -672,7 +672,7 @@ function addGround()
 {
 	// add simple ground
 		
-	var woodMap = THREE.ImageUtils.loadTexture( "/resources/Texture parquet rovere seamless simo-3d.jpg",THREE.UVMapping );
+	var woodMap = THREE.ImageUtils.loadTexture( "/Tesi/DK2 V2/resources/Texture parquet rovere seamless simo-3d.jpg",THREE.UVMapping );
 	woodMap.wrapS = woodMap.wrapT = THREE.RepeatWrapping;
 	woodMap.repeat.set( 5, 5 );
 	woodMap.anisotropy = 16;
